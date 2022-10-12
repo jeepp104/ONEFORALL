@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>My LIFF App</title>
+</head>
+<body>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
+    <script>
+        async function main() {
+                                         // Liff ID
+            await liff.init({ liffId: "1657530999-L2PnPPeR" })
+            await liff.shareTargetPicker([
+                {
+                    type: "flex",
+                    // ข้อความก่อนกดอ่าน
+                    altText: "สวัสดีค่ะ",
+                    contents: 
+                    // โค้ดจาก line bot designer
+                    {
+  "type": "bubble",
+  "hero": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "image",
+        "url": "https://www.img.in.th/images/0bc419e8b31b8ca5e07993f2a9598399.jpg",
+        "size": "full"
+      }
+    ]
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://www.img.in.th/images/f19b8360de6668743dc205cfaec76b9f.png",
+            "size": "full",
+            "aspectRatio": "5:1"
+          }
+        ],
+        "action": {
+          "type": "uri",
+          "label": "action",
+          "uri": "https://lin.ee/6zWHAwl"
+        }
+      },
+      {
+        "type": "separator",
+        "color": "#000000",
+        "margin": "md"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://www.img.in.th/images/5e17117c518b339851c02749a46e136f.png",
+            "size": "full",
+            "aspectRatio": "5:1"
+          }
+        ],
+        "margin": "sm",
+        "backgroundColor": "#ffe83e",
+        "borderWidth": "bold",
+        "borderColor": "#ffffff",
+        "cornerRadius": "xl",
+        "action": {
+          "type": "uri",
+          "label": "action",
+          "uri": "https://bit.ly/3V6T8BL"
+        }
+      }
+    ],
+    "backgroundColor": "#fbdd01"
+  }
+}
+                }
+            ])
+            liff.closeWindow()
+        }
+        main()
+    </script>
+</body>
+</html>
